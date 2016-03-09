@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem; /* =16px */
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#535252;
+    line-height:18px;
+    margin:0px;
+    padding:0px;
+    background-color: #a80f15;
+    text-align: center;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+
+img{
+    display:block;
+}
+
+
+.btn{
+    position: absolute;
+    float: left;
+    display: block;
+}
+
+.btn{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btn:active{
+    opacity: 0.6;
+}
+
+.panels{
+    width:640px;
+    height: 1138px;
+    position: absolute;
+    display: none;
+    float: left;
+    margin:auto;
+    text-align: left;
+    overflow: hidden;
+    background-color: #a80f15;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0px;
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+    color:    #ffffff;
+}
+input:-moz-placeholder,textarea:-moz-placeholder {
+    color:    #ffffff;
+}
+
+
+.panels .pic{
+    position: absolute;
+    float: left;
+}
+
+
+
+/*======================================================================*/
+
+
+#panelidols{
+
+}
+
+
+
+
+.idol1{
+    background: url("../images/idol1.jpg") no-repeat center bottom;;
+}
+.idol2{
+    background: url("../images/idol2.jpg") no-repeat center bottom;
+}
+.idol3{
+    background: url("../images/idol3.jpg") no-repeat center bottom;
+}
+.idol4{
+    background: url("../images/idol4.jpg") no-repeat center bottom;
+}
+
+
+.btndiy{
+    display: block;
+    position: absolute;
+    background: url("../images/btnget.png") no-repeat;
+    width: 316px;
+    height: 90px;
+    margin-left: -158px;
+    left: 50%;
+    bottom: 65px;
+}
+
+.idolvoice{
+    background: url("../images/outline.png");
+    width: 534px;
+    height: 131px;
+    position: absolute;
+    margin-left: -267px;
+    left: 50%;
+    bottom: 211px;
+}
+
+.userhead{
+    width: 84px;
+    height: 84px;
+    border: solid 5px #9f9fad;
+    border-radius:42px;
+    position: absolute;
+}
+
+.idolvoice .userhead{
+    margin-left: 92px;
+    margin-top: 25px;
+}
+
+.btnhear{
+    background: url("../images/btnplay.png");
+    width: 258px;
+    height: 60px;
+    position: absolute;
+}
+
+
+.btnhear.on{
+    background: url("../images/playing.gif");
+
+}
+
+
+.idolvoice .btnhear{
+    margin-left: 188px;
+    margin-top: 35px;
+}
+
+
+#paneldiy{
+    background: url("../images/userback.jpg") no-repeat center bottom;
+}
+
+
+#paneldiy .userhead{
+    left: 145px;
+   bottom: 717px;
+}
+
+
+#paneldiy .btnhear{
+    left: 242px;
+    bottom: 733px;
+}
+
+
+#paneldiy #userpic{
+    left: 70px;
+    bottom:42px;
+    width: 499px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 5px 5px 45px #4d0107;
+}

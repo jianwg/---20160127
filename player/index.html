@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+
+    <script src="js/meta.js"></script>
+    <title>优衣库</title>
+    <link rel="stylesheet" href="http://minires.hdtmedia.com/uniqlo20160104/player/assets/css/app.css">
+   <!--<link rel="stylesheet" href="assets/css/app.css">-->
+    <style>
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem; /* =16px */
+            font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color:#535252;
+            line-height:18px;
+            margin:0px;
+            padding:0px;
+            background-color: #a80f15;
+            text-align: center;
+            width:100%;
+            height:100%;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        ul,li{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+
+        }
+
+        img{
+            display:block;
+        }
+
+
+        .btn{
+            position: absolute;
+            float: left;
+            display: block;
+        }
+
+        .btn{
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .btn:active{
+            opacity: 0.6;
+        }
+
+        #userpic{
+            pointer-events: none;
+        }
+
+
+        .panels{
+            width:640px;
+            height: 1138px;
+            position: absolute;
+            display: none;
+            float: left;
+            margin:auto;
+            text-align: left;
+            overflow: hidden;
+            background-color: #a80f15;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            bottom: 0px;
+        }
+        #loading{
+            color: #FFFFFF;
+            padding-top: 500px;
+            text-align: center;
+            display: block;
+            font-size: 25px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="panels" id="loading">Loading...</div>
+<div class="panels" id="panelidols">
+    <div class="idolvoice">
+        <img src="" class="userhead">
+        <a href="javascript:void(0);" class="btnhear"></a>
+    </div>
+    <a href="javascript:void(0);" class="btndiy"></a>
+</div>
+<div class="panels" id="paneldiy">
+    <img src="" id="userpic" >
+    <a href="javascript:void(0);" class="btndiy"></a>
+    <img src="" class="userhead">
+    <a href="javascript:void(0);" class="btnhear"></a>
+</div>
+<div class="panels" id="share"><div class="arrow"></div><a href="javascript:void(0);" id="btncloseshare"></a></div>
+<div style="display: none" id="cache"></div>
+<div style="display: none">
+    <script src="../commonjs/baidu.js"></script>
+
+</div>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://minires.hdtmedia.com/jslib/jquery.min.js"></script>
+<script src="http://minires.hdtmedia.com/jslib/TweenMax.min.js"></script>
+<script src="../commonjs/weixin.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="ch-ZN">
+    <meta charset="UTF-8">
+    <script src="js/meta.js"></script>
+    <title>优衣库</title>
+    <link rel="stylesheet" href="http://minires.hdtmedia.com/uniqlo20160104/resources/css/index.css"/>
+    <script src="http://minires.hdtmedia.com/jslib/jquery.min.js"></script>
+    <script src="http://minires.hdtmedia.com/jslib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <style>
+
+        .nolongtouch{
+            pointer-events: none;
+            -webkit-pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="page" id="loadPage">
+    <div class="logo"></div>
+    <div class="starcontainer">
+        <div class="stars star1"></div>
+        <div class="stars star2"></div>
+        <div class="stars star3"></div>
+        <div class="stars star4"></div>
+        <div class="stars star5"></div>
+    </div>
+    <div class="fu"></div>
+    <div class="loadnum">0%</div>
+</div>
+<div class="abs" id="audioBtn"></div>
+<section class="page" id="p1">
+    <img class="abs p1_man" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_man.png" alt=""/>
+    <img class="abs p1_women" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_women.png" alt=""/>
+    <img class="abs p1_01" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_01.png" alt=""/>
+    <img class="abs p1_02" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_02.png" alt=""/>
+    <img class="abs p1_03" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_03.png" alt=""/>
+    <img class="abs p1_04" data-sex="man" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_btn_01.png" alt=""/>
+    <img class="abs p1_05" data-sex="women" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p1_btn_02.png" alt=""/>
+    <img class="abs ruleBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/ruleBtn.png" alt=""/>
+    <div class="starcontainer">
+        <div class="stars star1"></div>
+        <div class="stars star2"></div>
+        <div class="stars star3"></div>
+        <div class="stars star4"></div>
+    </div>
+    <div class="abs man" data-sex="man"></div>
+    <div class="abs women" data-sex="women"></div>
+</section>
+<section class="page" id="p2">
+    <img class="abs p2_01" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_01.png" alt=""/>
+    <!-- 陈坤或倪妮推倦着装 -->
+    <div class="abs clothesCon">
+        <ul class="women">
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_05.png" alt=""/><span class="abs"></span></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_01.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_02.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_03.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_04.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_05.png" alt=""/><span class="abs"></span></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_01.png" alt=""/></li>
+        </ul>
+        <ul class="man">
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_05.png" alt=""/><span class="abs"></span></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_03.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_04.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_01.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_02.png" alt=""/></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_05.png" alt=""/><span class="abs"></span></li>
+            <li class="singleClose"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_closees_03.png" alt=""/></li>
+        </ul>
+    </div>
+    <!-- 左右切换按钮 -->
+    <img class="abs toggle_btn" id="p2_prev_btn" data-goto="-1" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_prev_btn.png" alt="向左切换按钮"/>
+    <img class="abs toggle_btn" id="p2_next_btn" data-goto="1" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_next_btn.png" alt="向右切换按钮"/>
+    <!-- 陈坤或倪妮 -->
+    <div class="person"><img class="abs" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_person_man.png" alt=""/></div>
+    <!-- 陈坤或倪妮推倦着装具体陈词 -->
+    <div class="info"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_info_01.png" alt=""/></div>
+    <!-- 确定着装按钮 -->
+    <img class="abs" id="sureBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p2_btn_sure.png" alt=""/>
+
+    <input id="upload1" type="file" accept="image/*" />
+</section>
+<!-- 选定着装为陈坤或倪妮，送语音祝福 -->
+<section class="page" id="p3">
+    <img class="abs p4_01 " src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p4_01.png" alt="" style="display: block"/>
+    <img id="theOne" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p3_theOne_01.jpg" alt="" class="nolongtouch"/>
+    <div class="returnBtn" id="p3_returnBtn"></div>
+    <img class="abs p3_startRecording startRecording nolongtouch" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/startRecording.png" alt=""/>
+    <!-- 遮住图片，防止长按出现默认事件，导致保存图片 -->
+    <div class="abs pressBtn p3_pressBtn"></div>
+    <img class="abs p3_sureAudioBtn sureAudioBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/sureAudio_btn.png" alt=""/>
+    <div class="abs p3_sureAudioBtnMark sureAudioBtnMark"></div>
+    <img class="abs p3_alignRecBtn alignRecBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/alignRec_btn.png" alt=""/>
+    <div class="abs countTimes p3_countTimes">
+        <span></span>
+    </div>
+    <div class="abs playAudioBtn p3_playAudioBtn"></div>
+</section>
+<!-- 自己上传照片，调整照片页面 -->
+<section class="page" id="p4">
+    <!-- 调整照片页面 -->
+    <div class="abs" id="content">
+        <img class="abs canvasBg" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p4_card.png" alt=""/>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="returnBtn" id="p4_returnBtn"></div>
+    <img class="abs" id="p4_sureBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p4_btn_01.png" alt=""/>
+    <img class="abs" id="p4_alignBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p4_btn_02.png" alt=""/>
+    <input id="upload2" type="file" accept="image/*" />
+    <div id="tips" class="page">
+        <b>上传中...</b>
+    </div>
+    <!-- 送语音祝福 -->
+    <div id="mark1"></div>
+    <img class="abs p4_01" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p4_01.png" alt=""/>
+    <img class="abs p4_startRecording startRecording" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/startRecording.png" alt=""/>
+    <!-- 遮住图片，防止长按出现默认事件，导致保存图片 -->
+    <div class="abs pressBtn p4_pressBtn"></div>
+    <img class="abs p4_sureAudioBtn sureAudioBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/sureAudio_btn.png" alt=""/>
+    <div class="abs p4_sureAudioBtnMark sureAudioBtnMark"></div>
+    <img class="abs p4_alignRecBtn alignRecBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/alignRec_btn.png" alt=""/>
+    <div class="abs countTimes p4_countTimes">
+        <span></span>
+    </div>
+    <div class="abs playAudioBtn p4_playAudioBtn"></div>
+    <img class="abs daofu" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/p4_daofu.png" alt=""/>
+</section>
+<!-- 分享页面 -->
+<div class="page" id="sharePage">
+    <img id="closeBtn" src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/closeBtn.png" alt=""/>
+</div>
+<!-- 活动规则页面 -->
+<div class="page" id="rulePage" style="display: none">
+    <div class="tnccontainer"><img src="http://minires.hdtmedia.com/uniqlo20160104/resources/img/tnc.png"></div>
+    <a href="javascript:void(0);" id="btnclosetnc"></a>
+</div>
+<!-- 遮罩层页面 -->
+<div class="page" id="markPage">
+    <div class="abs closebtn"></div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/exif.js"></script>
+<script src="commonjs/weixin.js"></script>
+<script src="js/jpeg_encoder_basic.js"></script>
+<div style="display: none">
+    <script src="commonjs/baidu.js"></script>
+</div>
+</body>
+</html>
